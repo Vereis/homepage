@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #EEE;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/bg1.jpg");
+    background-size: cover;
+}
+
+.section-search {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.section-search header {
+    font-size: 3.5em;
+    margin: 0.5em;
+}
+
+.section-search input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0.5em;
+    margin: 0;
+    transition: all 0.25s ease-in-out;
+    font-size: 1.75em;
+    background-color: rgba(255, 255, 255, 0);
+    filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+}
+
+.section-search input:focus,
+.section-search input:hover,
+.section-search input:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0, 0, 0.5em rgba(0, 0, 0, 0.4));
+}
+
+.section-search .search-bar {
+    min-width: 20em;
+    background-color: rgba(255, 255, 255, 0);
+    color: #EEE;
+}
