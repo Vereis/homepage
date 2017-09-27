@@ -68,7 +68,7 @@ nav aside {
 }
 
 a + a {
-    margin-left: 1rem;
+    margin-left: 1em;
 }
 
 .clearfix:after {
