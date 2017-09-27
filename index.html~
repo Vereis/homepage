@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="clearfix">
         <header>
-            <h1> Chris Bailey </h1>
-            <h5> Problem Solver </h5>
+            <h3> Chris Bailey </h3>
+            <h6> Problem Solver </h6>
         </header>
         <aside>
             <a href=""> Link One </a>
@@ -25,6 +25,41 @@
             <a href=""> Link Three </a>
         </aside>
     </nav>
+    <main>
+        <section>
+            <h1> Some title </h1>
+            <p>
+                Maybe have some text here
+            </p>
+            <p>
+                Some more text here, why not :)
+            </p>
+            <p>
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+            </p>
+            <p>
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+            </p>
+            <p>
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+                A much bigger section A much bigger sectionA much bigger section
+            </p>
+        </section>
+    </main>
 </body>
 
 </html>
