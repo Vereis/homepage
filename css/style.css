@@ -6,6 +6,7 @@
 
 html {
     height: 100%;
+    font-size: 18px;
 }
 
 ::-moz-selection { 
@@ -23,7 +24,6 @@ body {
     color: #555;
     background-color: #FAFAFA;
     padding: 4rem;
-    font-size: 18px;
     height: 100%;
     max-width: 74rem;
     margin: 0 auto;
@@ -37,36 +37,34 @@ h3,
 h4, 
 h5, 
 h6 {
+    line-height: 1.2;
     margin: 1rem 0;
     color: #333;
     font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 4rem;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 3.5rem;
-}
-
-h3 {
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-h4 {
     font-size: 2.5rem;
 }
 
-h5 {
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
     font-size: 2rem;
 }
 
-h6 {
+h4 {
+    font-size: 1.75rem;
+}
+
+h5 {
     font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.25rem;
 }
 
 aside {
@@ -80,7 +78,8 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+a:hover,
+.nav-burger:hover {
     color: #555;
     background-color: #EEEEEE;
 }
@@ -92,7 +91,7 @@ a + a {
 nav {
     width: 100%;
     display: block;
-    height: 9rem;
+    height: 6rem;
     border-bottom: 1px solid #EAEAEA;
 }
 
@@ -100,8 +99,8 @@ nav > *:not(aside) {
     float: left;
 }
 
-nav > aside {
-    margin-top: 1rem;
+nav > header > *:first-child {
+    margin-top: 0;
 }
 
 nav > header > * + * {
@@ -110,7 +109,7 @@ nav > header > * + * {
 
 main {
     margin-top: 1rem;
-    height: calc(100% - 10rem);
+    height: calc(100% - 7rem);
     overflow: auto;  
     line-height: 1.7;
     padding-right: 2rem;
@@ -121,17 +120,19 @@ main p + p {
 }
 
 section > header {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     position: relative;
-}
-
-section > header > h1 {
-    margin-bottom: 0;
 }
 
 section > header > a {
     background-color: #333;
     color: #EAEAEA;
+    margin-left: -0.25rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 0.75rem;
 }
 
 section > header > a:hover {
@@ -160,4 +161,52 @@ footer {
     content: "";
     display: table;
     clear: both;
+}
+
+.nav-burger {
+    display: none;
+    cursor: pointer;
+    border: 0.5rem solid transparent;
+}
+
+.nav-burger *[class*="burger-bar"] {
+    width: 1em;
+    height: 0.2em;
+    background-color: #AAAAAA;
+    margin: calc(0.4em / 3) 0;
+    transition: 0.4s;
+}
+
+/* Breakpoints */
+@media all and (max-width: 880px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 640px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        padding: 2rem;
+    }
+
+    main {
+        height: calc(100% - 9rem);
+    }
+
+    footer {
+        width: calc(100% - 4rem);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-burger {
+        font-size: 18px;
+        display: inline-block;
+    }
 }
