@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fire+Mono|Crimson+Text|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Fire+Mono|Hind|Montserrat');
 
 * {
     box-sizing: border-box;    
@@ -6,7 +6,7 @@
 
 html {
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 ::-moz-selection { 
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Hind', serif;
     color: #555;
     background-color: #FAFAFA;
     padding: 4rem;
@@ -44,27 +44,27 @@ h6 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
 }
 
 h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 
 h4 {
-    font-size: 1.75rem;
+    font-size: 2rem;
 }
 
 h5 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 h6 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 aside {
@@ -74,7 +74,8 @@ aside {
 a {
     text-decoration: none;
     color: #666;
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -124,6 +125,29 @@ section > header {
     position: relative;
 }
 
+section > header > h6,
+section > header > h5,
+section > header > h4,
+section > header > h3,
+section > header > h2,
+section > header > h1 {
+    display: inline-block;
+}
+
+section > header > time {
+    display: inline;
+}
+
+section > header > time:before {
+    content: "Posted at: ";
+    margin-left: 0.5em;
+}
+
+section > header > time:after {
+    content: "";
+    display: block;
+}
+
 section > header > a {
     background-color: #333;
     color: #EAEAEA;
@@ -138,12 +162,6 @@ section > header > a {
 section > header > a:hover {
     background-color: #555;
     color: #EAEAEA;
-}
-
-section > header > time {
-    position: absolute;
-    right: 1rem;
-    top: 0rem;
 }
 
 footer {
@@ -167,6 +185,7 @@ footer {
     display: none;
     cursor: pointer;
     border: 0.5rem solid transparent;
+    position: relative;
 }
 
 .nav-burger *[class*="burger-bar"] {
@@ -174,19 +193,68 @@ footer {
     height: 0.2em;
     background-color: #AAAAAA;
     margin: calc(0.4em / 3) 0;
-    transition: 0.4s;
+    transition: 0.4s ease;
+}
+
+.nav-burger .dropdown-toggle {
+    position: absolute;
+    height: 140%;
+    width: 140%;
+    top: -20%;
+    left: -20%;
+    opacity: 0;
+}
+
+.nav-burger .dropdown:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    top: -0.5rem;
+    right: 1.5rem;
+    background-color: inherit;
+    transform: rotate(45deg);
+}
+
+.nav-burger .dropdown {
+    position: absolute;
+    margin: 0;
+    list-style: none;
+    top: 3rem;
+    right: -1.5rem;
+    background-color: #333;
+    z-index: 1;
+    padding: 1rem;
+    text-align: right;
+    transition: 0.5s ease-in-out;
+    display: none;
+    opacity: 0;
+}
+
+.nav-burger .dropdown-toggle:checked + .dropdown {
+    display: block;
+    opacity: 1;
+}
+
+.nav-burger .dropdown li a {
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    display: block;
+    text-align: right;
 }
 
 /* Breakpoints */
 @media all and (max-width: 880px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
 @media all and (max-width: 640px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     body {
