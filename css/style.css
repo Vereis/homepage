@@ -95,6 +95,10 @@ mark {
     padding: 0.1em 0.5em;
 }
 
+p {
+    quotes: "" "";
+}
+
 p a, 
 p a + a {
     margin: 0;
@@ -339,7 +343,7 @@ footer {
     section header time {
         display: block;
     }
-    
+
     section header h1 {
         margin-bottom: 0;
     }
