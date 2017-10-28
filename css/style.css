@@ -159,6 +159,10 @@ nav > *:not(aside) {
     float: left;
 }
 
+nav > header {
+    white-space: nowrap;
+}
+
 nav > header > *:first-child {
     margin-top: 0;
 }
@@ -194,7 +198,8 @@ section > header > h1 {
 }
 
 section > header > time {
-    display: inline;
+    display: inline-block;
+    user-select: none;
 }
 
 section > header > time:before {
@@ -202,12 +207,7 @@ section > header > time:before {
     margin-left: 0.5em;
 }
 
-section > header > time:after {
-    content: "";
-    display: block;
-}
-
-section > header > a {
+section > header .article-tag {
     background-color: #333;
     color: #EAEAEA;
     margin-left: -0.25rem;
@@ -218,7 +218,7 @@ section > header > a {
     font-size: 0.75rem;
 }
 
-section > header > a:hover {
+section > header .article-tag:hover {
     background-color: #555;
     color: #EAEAEA;
 }
@@ -309,11 +309,19 @@ footer {
     html {
         font-size: 14px;
     }
+
+    blockquote {
+        margin: 1rem 2rem;
+    }
 }
 
 @media all and (max-width: 640px) {
     html {
         font-size: 14px;
+    }
+
+    blockquote {
+        margin: 1rem 1rem;
     }
 
     body {
@@ -334,7 +342,10 @@ footer {
 
     .nav-burger {
         font-size: 18px;
-        display: inline-block;
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
     }
 }
 
